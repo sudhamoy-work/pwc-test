@@ -14,7 +14,8 @@ namespace WeatherService
                 {
                     inputCity = args[0].Trim();
                 }
-                else
+
+                if(string.IsNullOrWhiteSpace(inputCity))
                 {
                     System.Console.WriteLine("You haven't entered a city. Please try again.");
                     return;
